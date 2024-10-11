@@ -1,0 +1,207 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>第二周xuexi | 鸣太祖的博客</title><meta name="author" content="鸣太祖"><meta name="copyright" content="鸣太祖"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="C语言PE格式 Win：.exe&#x2F; .dll&#x2F; .sysLinux：.elf    构成  DOS部首e_magic(MZ): “0x5a4d”DOS Stub:”this program Cannot be run in DOS mode”(起兼容作用)e_lfanew:指向真正PE文件头“0x3c”  PE文件头 ​	由”PE\0\0”开头”0x50 0x45 00 00”">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第二周xuexi">
+<meta property="og:url" content="http://example.com/2024/10/11/%E7%AC%AC%E4%BA%8C%E5%91%A8%E5%AD%A6%E4%B9%A0/index.html">
+<meta property="og:site_name" content="鸣太祖的博客">
+<meta property="og:description" content="C语言PE格式 Win：.exe&#x2F; .dll&#x2F; .sysLinux：.elf    构成  DOS部首e_magic(MZ): “0x5a4d”DOS Stub:”this program Cannot be run in DOS mode”(起兼容作用)e_lfanew:指向真正PE文件头“0x3c”  PE文件头 ​	由”PE\0\0”开头”0x50 0x45 00 00”">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/jinxi.jpg">
+<meta property="article:published_time" content="2024-10-11T14:48:07.000Z">
+<meta property="article:modified_time" content="2024-10-11T14:49:11.606Z">
+<meta property="article:author" content="鸣太祖">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/jinxi.jpg"><link rel="shortcut icon" href="/img/changli.jpg"><link rel="canonical" href="http://example.com/2024/10/11/%E7%AC%AC%E4%BA%8C%E5%91%A8%E5%AD%A6%E4%B9%A0/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        if (name && globalFn[key][name]) return
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '第二周xuexi',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-10-11 22:49:11'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg" style="background-image: url(/img/1111.jpg);"></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/dage.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">鸣太祖的博客</span></a><a class="nav-page-title" href="/"><span class="site-name">第二周xuexi</span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">第二周xuexi</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-10-11T14:48:07.000Z" title="发表于 2024-10-11 22:48:07">2024-10-11</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-10-11T14:49:11.606Z" title="更新于 2024-10-11 22:49:11">2024-10-11</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="C语言"><a href="#C语言" class="headerlink" title="C语言"></a>C语言</h2><h3 id="PE格式"><a href="#PE格式" class="headerlink" title="PE格式"></a>PE格式</h3><ul>
+<li>Win：.exe&#x2F; .dll&#x2F; .sys<br>Linux：.elf</li>
+</ul>
+<p><img src="https://github.com/feiyongjian/picture/blob/main/1.png?raw=true" alt="1.png"></p>
+<ul>
+<li><p>构成</p>
+<ul>
+<li><p>DOS部首<br>e_magic(MZ): “0x5a4d”<br>DOS Stub:”this program Cannot be run in DOS mode”(起兼容作用)<br>e_lfanew:指向真正PE文件头“0x3c”</p>
+</li>
+<li><p>PE文件头</p>
+<p>​	由”PE\0\0”开头”0x50 0x45 00 00”<br>​	MAGE_OPTIONAL_HEADER32和IMAGE_FILE_HEADER定义PE的数据<br>​	数据目录表中有PE使用的导入表（引用的函数）与导出表（程序本身定义的函数）</p>
+</li>
+<li><p>块表</p>
+<p>​	指向块</p>
+</li>
+<li><p>块</p>
+<p>​	用来存放信息与代码等</p>
+</li>
+<li><p>调试信息</p>
+<p>​	用于调试</p>
+</li>
+</ul>
+</li>
+<li><p>**Imagebase:**基地址,磁盘中的文件加载到内存当中的时候可以加载到任意位置，而这个位置就是程序的基址<br><strong>VA:</strong> 虚拟内存地址,PE 文件被操作系统加载进内存后的地址。</p>
+<p><strong>RVA:</strong> PE文件的相对虚拟地址,PE文件中的数据、模块等运行在内存中的实际地址相对PE文件装载到内存的基址之间的距离<br>    VA&#x3D;ImageBase+RVA</p>
+</li>
+</ul>
+<h3 id="进制"><a href="#进制" class="headerlink" title="进制"></a>进制</h3><p>C：<br>    十六进制：0x开头<br>    二进制：无单独二进制表示方式</p>
+<p>汇编语言：<br>     十六进制：H结尾(a&#x3D;10,……f&#x3D;15)<br>     八进制    ：O结尾<br>         十进制    ：D结尾<br>      二进制   ：B结尾</p>
+<ul>
+<li><strong>进制转换：</strong></li>
+</ul>
+<p>​			<img src="https://github.com/feiyongjian/picture/blob/main/2.png?raw=true" alt="2.png"></p>
+<p>十六进制：0x11a&#x3D;1*16^2+1 <em>16^1+a</em>16^0&#x3D;282</p>
+<p>八进制：0127&#x3D;1*8^2+2 *8^1+7&#x3D;87</p>
+<p>二进制：00101101&#x3D;1*2^5+1 *2^3+1 *2^2+1&#x3D;45</p>
+<p><img src="https://github.com/feiyongjian/picture/blob/main/3.png?raw=true" alt="3.png"></p>
+<h3 id="编码"><a href="#编码" class="headerlink" title="编码"></a>编码</h3><ul>
+<li>原码：数值前增加一位符号位(0为正，1为负),符号位无法参与运算<br>反码：正整数为其自身，负整数通过对其绝对值逐位求反来求，但会出现（+0），（-0）<br>补码：正数为本身，负数为绝对值求反加1，0补码为0,用符号位扩充</li>
+</ul>
+<h3 id="存储方式"><a href="#存储方式" class="headerlink" title="存储方式"></a>存储方式<img src="https://github.com/feiyongjian/picture/blob/main/4.png?raw=true" alt="4.png"></h3><ul>
+<li>低位优先：x86</li>
+</ul>
+<h3 id="浮点数"><a href="#浮点数" class="headerlink" title="浮点数"></a>浮点数</h3><p>单精度浮点数：float，占4个字节 ，数字后加“f”<br>               阶码8位，尾数23位</p>
+<p>双精度浮点数：double，占8个字节<br>               阶码11位，尾数52位</p>
+<p><img src="https://github.com/feiyongjian/picture/blob/main/5.png?raw=true" alt="5.png"></p>
+<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p>字符：char(ASCII字符) <mark>1个字节</mark>&#x2F;wchar_t（UNICODE字符，字符前加L)<mark>2或4个字节</mark></p>
+<p>整型：short<mark>2个字节</mark>&#x2F;int<mark>4个字节</mark>&#x2F;long<mark>4或8个字节</mark>&#x2F;long long&#x2F;_int64</p>
+<p>实数单精度：float<mark>4个字节</mark></p>
+<p>实数双精度：double<mark>8个字节</mark></p>
+<p>有符号和无符号：signed&#x2F;unsigned,(signed)int&#x2F;unsigned int</p>
+<p>布尔类型：bool，0&#x2F;1（true&#x2F;false）<mark>1个字节</mark>（C99之后，或C++）<br>           BOOL<mark>4个字节</mark>（windows）</p>
+<h4 id="Ascall编码"><a href="#Ascall编码" class="headerlink" title="Ascall编码"></a>Ascall编码</h4><p><img src="https://foruda.gitee.com/images/1728567336601124332/a192d68e_14987772.png" alt="输入图片说明"></p>
+<p><img src="https://github.com/feiyongjian/picture/blob/main/7.png?raw=true" alt="7.png"></p>
+<p>字符转整数：c-‘0’&#x2F;&#x2F;‘5’–’0’&#x3D;5<br>整数转字符：i+’0’&#x2F;&#x2F;‘5’+’0’&#x3D;’5’</p>
+<p>char c&#x3D;’M’;<br>c+’a’-‘A’;&#x2F;&#x2F; 大写转小写<br>char ch&#x3D;‘y’；<br>ch+’A’-‘a’;&#x2F;&#x2F;小写转大写</p>
+<h4 id="表示的数的范围"><a href="#表示的数的范围" class="headerlink" title="表示的数的范围"></a>表示的数的范围</h4><p>char:[-128，+127]	&#x2F;	[0，255]<br>short:[-32768,32767]	&#x2F;	[0,65535]<br>int&#x2F;long:[–2147483648,2147483647]	&#x2F;	[0,4294967295]<br>float:[-34<em>10^38,3.4</em>10^38]<br>double:[-1.7<em>10^-308,1.7</em>10^308]<br>最大向上溢出1变最小，最小向下溢出1变最大</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">鸣太祖</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2024/10/11/%E7%AC%AC%E4%BA%8C%E5%91%A8%E5%AD%A6%E4%B9%A0/">http://example.com/2024/10/11/%E7%AC%AC%E4%BA%8C%E5%91%A8%E5%AD%A6%E4%B9%A0/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://example.com" target="_blank">鸣太祖的博客</a>！</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="/img/jinxi.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="next-post pull-full" href="/2024/10/11/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0/" title="第一周学习"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">第一周学习</div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info is-center"><div class="avatar-img"><img src="/img/jinxi.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">鸣太祖</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎你的到来</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#C%E8%AF%AD%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">C语言</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#PE%E6%A0%BC%E5%BC%8F"><span class="toc-number">1.1.</span> <span class="toc-text">PE格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9B%E5%88%B6"><span class="toc-number">1.2.</span> <span class="toc-text">进制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E7%A0%81"><span class="toc-number">1.3.</span> <span class="toc-text">编码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E6%96%B9%E5%BC%8F"><span class="toc-number">1.4.</span> <span class="toc-text">存储方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%AE%E7%82%B9%E6%95%B0"><span class="toc-number">1.5.</span> <span class="toc-text">浮点数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.6.</span> <span class="toc-text">数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Ascall%E7%BC%96%E7%A0%81"><span class="toc-number">1.6.1.</span> <span class="toc-text">Ascall编码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A1%A8%E7%A4%BA%E7%9A%84%E6%95%B0%E7%9A%84%E8%8C%83%E5%9B%B4"><span class="toc-number">1.6.2.</span> <span class="toc-text">表示的数的范围</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/10/11/%E7%AC%AC%E4%BA%8C%E5%91%A8%E5%AD%A6%E4%B9%A0/" title="第二周xuexi">第二周xuexi</a><time datetime="2024-10-11T14:48:07.000Z" title="发表于 2024-10-11 22:48:07">2024-10-11</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/10/11/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0/" title="第一周学习">第一周学习</a><time datetime="2024-10-11T14:06:20.000Z" title="发表于 2024-10-11 22:06:20">2024-10-11</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/img/dage.jpg);"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2024 By 鸣太祖</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
