@@ -1,0 +1,187 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>第三周学习 | 鸣太祖的博客</title><meta name="author" content="鸣太祖"><meta name="copyright" content="鸣太祖"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="程序的语句定义语句&amp;表达式语句&amp;赋值语句1int i&#x3D;1;		i++; i+1; i;		a&#x3D;5;  函数调用语句12345678910111213#include&lt;stdio.h&gt;			srand((int)time(0));		&#x2F;&#x2F;生成随机数种子（当前时间）rand();    					&#x2F;&#x2F;生成随机数百以内随机数srand((unsigned int)time(0">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第三周学习">
+<meta property="og:url" content="http://example.com/2024/10/14/%E7%AC%AC%E4%B8%89%E5%91%A8%E5%AD%A6%E4%B9%A0/index.html">
+<meta property="og:site_name" content="鸣太祖的博客">
+<meta property="og:description" content="程序的语句定义语句&amp;表达式语句&amp;赋值语句1int i&#x3D;1;		i++; i+1; i;		a&#x3D;5;  函数调用语句12345678910111213#include&lt;stdio.h&gt;			srand((int)time(0));		&#x2F;&#x2F;生成随机数种子（当前时间）rand();    					&#x2F;&#x2F;生成随机数百以内随机数srand((unsigned int)time(0">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/jinxi.jpg">
+<meta property="article:published_time" content="2024-10-14T13:23:16.000Z">
+<meta property="article:modified_time" content="2024-10-14T13:34:07.394Z">
+<meta property="article:author" content="鸣太祖">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/jinxi.jpg"><link rel="shortcut icon" href="/img/changli.jpg"><link rel="canonical" href="http://example.com/2024/10/14/%E7%AC%AC%E4%B8%89%E5%91%A8%E5%AD%A6%E4%B9%A0/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        if (name && globalFn[key][name]) return
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '第三周学习',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-10-14 21:34:07'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg" style="background-image: url(/img/1111.jpg);"></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/dage.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">鸣太祖的博客</span></a><a class="nav-page-title" href="/"><span class="site-name">第三周学习</span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">第三周学习</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-10-14T13:23:16.000Z" title="发表于 2024-10-14 21:23:16">2024-10-14</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-10-14T13:34:07.394Z" title="更新于 2024-10-14 21:34:07">2024-10-14</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="程序的语句"><a href="#程序的语句" class="headerlink" title="程序的语句"></a>程序的语句</h1><h2 id="定义语句-表达式语句-赋值语句"><a href="#定义语句-表达式语句-赋值语句" class="headerlink" title="定义语句&amp;表达式语句&amp;赋值语句"></a>定义语句&amp;表达式语句&amp;赋值语句</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int i=1;		i++; i+1; i;		a=5;</span><br></pre></td></tr></table></figure>
+
+<h2 id="函数调用语句"><a href="#函数调用语句" class="headerlink" title="函数调用语句"></a>函数调用语句</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;			</span><br><span class="line"></span><br><span class="line">srand((int)time(0));		//生成随机数种子（当前时间）</span><br><span class="line"></span><br><span class="line">rand();    					//生成随机数</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">百以内随机数</span><br><span class="line">srand((unsigned int)time(0));           </span><br><span class="line">for(int i=0;i&lt;10;i++);</span><br><span class="line">&#123;</span><br><span class="line">    printf(&quot;%d&quot;,rand()%100);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="分支语句：if（可嵌套），switch（可与if互相转换）"><a href="#分支语句：if（可嵌套），switch（可与if互相转换）" class="headerlink" title="分支语句：if（可嵌套），switch（可与if互相转换）"></a>分支语句：if（可嵌套），switch（可与if互相转换）</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">int a=10;</span><br><span class="line">switch(a)					 //a 只能为整数，不能为浮点数，指针</span><br><span class="line">&#123;</span><br><span class="line">	case 100:</span><br><span class="line">		do something;</span><br><span class="line">		break;				//没有break会继续执行语句至break</span><br><span class="line">	case 90:</span><br><span class="line">		do something;</span><br><span class="line">		break;</span><br><span class="line">    default:				//其他值</span><br><span class="line">    	do something</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h2><p>​	for（表达式1；			&#x2F;&#x2F;对变量初始化<br>​		条件表达式2；	 	&#x2F;&#x2F;控制循环退出（值为false时退出循环）<br>​		表达式3）			&#x2F;&#x2F;更新循环变量表达式</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for (int i = 0; i&lt;10; i++)</span><br><span class="line">&#123;</span><br><span class="line">	printf(&quot;i:%d\n&quot;, i);		//循环体</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​	while(条件表达式)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">int i = 0;</span><br><span class="line">while (i&lt;10)</span><br><span class="line">&#123;</span><br><span class="line">	printf(&quot;i:%d\n&quot;, i);		// 循环体</span><br><span class="line">	i++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>​	do{循环体;}while(条件表达式);		(do while后有分号)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">int i = 0;</span><br><span class="line">do</span><br><span class="line">&#123;</span><br><span class="line">	printf(&quot;i:%d\n&quot;, i);</span><br><span class="line">	i++;</span><br><span class="line">&#125; while (i &lt; 10);				//先执行，再判断</span><br></pre></td></tr></table></figure>
+
+<h2 id="转向语句"><a href="#转向语句" class="headerlink" title="转向语句"></a>转向语句</h2><ul>
+<li>goto:(慎用，多用于出错处理和跳出多重循环）</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">语句1;</span><br><span class="line">语句2;</span><br><span class="line">goto Lable1;					//标号</span><br><span class="line">...								//不会执行，直接跳过</span><br><span class="line">Lable1:</span><br><span class="line">语句7;</span><br><span class="line">语句8;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>循环中的转向语句</p>
+<ul>
+<li><p>break（退出循环）</p>
+</li>
+<li><p>continue（忽略接下来语句重新执行）</p>
+</li>
+</ul>
+</li>
+<li><p>return（退出整个函数,并提供返回值）</p>
+</li>
+</ul>
+<h2 id="复合语句"><a href="#复合语句" class="headerlink" title="复合语句"></a>复合语句</h2><p>{	…</p>
+<p>​	{	…</p>
+<p>​	}</p>
+<p>}</p>
+<h2 id="空语句"><a href="#空语句" class="headerlink" title="空语句"></a>空语句</h2><p>;		&#x2F;&#x2F;什么也不做</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">鸣太祖</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2024/10/14/%E7%AC%AC%E4%B8%89%E5%91%A8%E5%AD%A6%E4%B9%A0/">http://example.com/2024/10/14/%E7%AC%AC%E4%B8%89%E5%91%A8%E5%AD%A6%E4%B9%A0/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://example.com" target="_blank">鸣太祖的博客</a>！</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="/img/jinxi.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="next-post pull-full" href="/2024/10/13/%E7%AC%AC%E4%BA%8C%E5%91%A8%E5%AD%A6%E4%B9%A0/" title="第二周学习"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">第二周学习</div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info is-center"><div class="avatar-img"><img src="/img/jinxi.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">鸣太祖</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎你的到来</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E7%9A%84%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.</span> <span class="toc-text">程序的语句</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E8%AF%AD%E5%8F%A5-%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AF%AD%E5%8F%A5-%E8%B5%8B%E5%80%BC%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.1.</span> <span class="toc-text">定义语句&amp;表达式语句&amp;赋值语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.2.</span> <span class="toc-text">函数调用语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5%EF%BC%9Aif%EF%BC%88%E5%8F%AF%E5%B5%8C%E5%A5%97%EF%BC%89%EF%BC%8Cswitch%EF%BC%88%E5%8F%AF%E4%B8%8Eif%E4%BA%92%E7%9B%B8%E8%BD%AC%E6%8D%A2%EF%BC%89"><span class="toc-number">1.3.</span> <span class="toc-text">分支语句：if（可嵌套），switch（可与if互相转换）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.4.</span> <span class="toc-text">循环语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BD%AC%E5%90%91%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.5.</span> <span class="toc-text">转向语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%8D%E5%90%88%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.6.</span> <span class="toc-text">复合语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A9%BA%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.7.</span> <span class="toc-text">空语句</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/10/14/%E7%AC%AC%E4%B8%89%E5%91%A8%E5%AD%A6%E4%B9%A0/" title="第三周学习">第三周学习</a><time datetime="2024-10-14T13:23:16.000Z" title="发表于 2024-10-14 21:23:16">2024-10-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/10/13/%E7%AC%AC%E4%BA%8C%E5%91%A8%E5%AD%A6%E4%B9%A0/" title="第二周学习">第二周学习</a><time datetime="2024-10-13T13:36:44.000Z" title="发表于 2024-10-13 21:36:44">2024-10-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/10/11/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0/" title="第一周学习">第一周学习</a><time datetime="2024-10-11T14:06:20.000Z" title="发表于 2024-10-11 22:06:20">2024-10-11</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/img/dage.jpg);"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2024 By 鸣太祖</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
