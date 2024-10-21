@@ -1,0 +1,202 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>第四周学习 | 鸣太祖的博客</title><meta name="author" content="鸣太祖"><meta name="copyright" content="鸣太祖"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="指针一个变量，值为一个内存地址，指向内存某个地方，明确该内存宽度 含义（变量&amp;&amp;地址&amp;&amp;内存宽度） 1类型名*指针名  解引用运算符 通过指针，找到对应内存与里面存放的数据 123456int a,b;int *p1,*p2;a&#x3D;100,b&#x3D;54;p1&#x3D;&amp;a;p2&#x3D;&amp;b;  &amp;，*互为逆运算 123456789int a &#x3D; 10;*&amp;amp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第四周学习">
+<meta property="og:url" content="http://example.com/2024/10/21/%E7%AC%AC%E5%9B%9B%E5%91%A8%E5%AD%A6%E4%B9%A0/index.html">
+<meta property="og:site_name" content="鸣太祖的博客">
+<meta property="og:description" content="指针一个变量，值为一个内存地址，指向内存某个地方，明确该内存宽度 含义（变量&amp;&amp;地址&amp;&amp;内存宽度） 1类型名*指针名  解引用运算符 通过指针，找到对应内存与里面存放的数据 123456int a,b;int *p1,*p2;a&#x3D;100,b&#x3D;54;p1&#x3D;&amp;a;p2&#x3D;&amp;b;  &amp;，*互为逆运算 123456789int a &#x3D; 10;*&amp;amp">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/jinxi.jpg">
+<meta property="article:published_time" content="2024-10-21T09:26:39.000Z">
+<meta property="article:modified_time" content="2024-10-21T14:00:18.182Z">
+<meta property="article:author" content="鸣太祖">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/jinxi.jpg"><link rel="shortcut icon" href="/img/changli.jpg"><link rel="canonical" href="http://example.com/2024/10/21/%E7%AC%AC%E5%9B%9B%E5%91%A8%E5%AD%A6%E4%B9%A0/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        if (name && globalFn[key][name]) return
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '第四周学习',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-10-21 22:00:18'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg" style="background-image: url(/img/1111.jpg);"></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/dage.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">鸣太祖的博客</span></a><a class="nav-page-title" href="/"><span class="site-name">第四周学习</span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">第四周学习</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-10-21T09:26:39.000Z" title="发表于 2024-10-21 17:26:39">2024-10-21</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-10-21T14:00:18.182Z" title="更新于 2024-10-21 22:00:18">2024-10-21</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h1><p>一个变量，值为一个内存地址，指向内存某个地方，明确该内存宽度</p>
+<p>含义（变量&amp;&amp;地址&amp;&amp;内存宽度）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">类型名*指针名</span><br></pre></td></tr></table></figure>
+
+<p>解引用运算符</p>
+<p>通过指针，找到对应内存与里面存放的数据</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">int a,b;</span><br><span class="line">int *p1,*p2;</span><br><span class="line">a=100,b=54;</span><br><span class="line">p1=&amp;a;</span><br><span class="line">p2=&amp;b;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>&amp;，*互为逆运算</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">int a = 10;</span><br><span class="line"></span><br><span class="line">*&amp;a == a;</span><br><span class="line">&amp;*a;  		 //error</span><br><span class="line"></span><br><span class="line">int *p = &amp;a;</span><br><span class="line">*p == a;</span><br><span class="line">*&amp;p == p;</span><br><span class="line">&amp;*p == p;</span><br></pre></td></tr></table></figure>
+
+<p>二级指针<br>存放一级指针的地址</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">int func1(int x);//传实参值，不能改变实参</span><br><span class="line">int func2(int *x);//穿实参指针，修改实参</span><br><span class="line">int func3(int &amp;x);//传实参引用，修改实参</span><br><span class="line">int func4(int **x);//实参是指针，传指针的指针，修改指针</span><br><span class="line">int func5(int *&amp;x);//实参是指针，传指针的引用，修改指针</span><br></pre></td></tr></table></figure>
+
+<h1 id="内存"><a href="#内存" class="headerlink" title="内存"></a>内存</h1><p>堆与栈的区别</p>
+<p>内存配置：</p>
+<ul>
+<li><p>栈：系统控制，由高到低增长		</p>
+</li>
+<li><p>堆：malloc&#x2F;free，地址由低到高</p>
+</li>
+</ul>
+<p>大小限制：</p>
+<ul>
+<li>栈：应用层1<del>10M，内核层12k</del>14k不等		</li>
+<li>堆：受限于计算机有效虚拟内存</li>
+</ul>
+<p>效率比较：</p>
+<ul>
+<li><p>栈：速度快，无法控制						</p>
+</li>
+<li><p>堆：速度慢，易产生内存碎片</p>
+</li>
+</ul>
+<p>存放内容：</p>
+<ul>
+<li>栈：记录程序执行时函数调用过程活动记录，参数，返回地址，ebp，局部变量</li>
+<li>堆：在堆的头部用一个字节存放堆的大小，剩余部分存储的内容由程序员根据程序员根据程序计算的需要决定</li>
+</ul>
+<h2 id="内存分配"><a href="#内存分配" class="headerlink" title="内存分配"></a>内存分配</h2><p><strong>malloc</strong></p>
+<p>用于申请一块连续的指定大小的内存块区域以void*类型返回分配的内存区域地址</p>
+<p>注意:返回无类型指针，在使用时要强制转换为所需类型<br>    在开辟的空间中，不要进行指针的移动，否则可能会出现申请空间与释放空间大小的不匹配</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;malloc.h&gt;				//头文件</span><br><span class="line"></span><br><span class="line">//指针自身 = (指针类型*）malloc（sizeof（指针类型）*数据数量）</span><br><span class="line"></span><br><span class="line">int n=10;</span><br><span class="line">unsigned int *arr;</span><br><span class="line">arr=(unsigned int*)malloc (sizeof (int )*n);</span><br><span class="line">if(arr==NULL);</span><br><span class="line">&#123;</span><br><span class="line">	perror(&quot;fun_name&quot;);</span><br><span class="line">	return;</span><br><span class="line">&#125;</span><br><span class="line">//使用free函数释放空间</span><br><span class="line"></span><br><span class="line">free(arr);</span><br></pre></td></tr></table></figure>
+
+<p><strong>calloc</strong><br>相比于malloc，只把分配的空间全部初始化为0</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">void*calloc(size_t num,size_t size)		//num:元素个数，size:每个元素大小</span><br></pre></td></tr></table></figure>
+
+<p><strong>realloc</strong></p>
+<p>对已经动态分配的一块空间再次分配，并返回调整之后的内存起始位置<br>使用 realloc 函数时就要注意用一个临时指针接收，当内存调整成功后再将临时指针赋给原指针</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">void*realloc(void*memblock,size_t size)		//memblock：要调整的内存地址，这块内存是动态内存分配得到的,size：以字节为单位的新大小</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int* ptr = (int*)malloc(100);</span><br><span class="line">	if (ptr == NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		preeor(&quot;main&quot;);</span><br><span class="line">		return;</span><br><span class="line">	&#125;	</span><br><span class="line">	...</span><br><span class="line">	//定义一个临时指针接收新地址</span><br><span class="line">	int* tmp = NULL;</span><br><span class="line">	tmp = (int*)realloc(ptr, 1000);</span><br><span class="line">	if (tmp != NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		ptr = tmp;</span><br><span class="line">	&#125;</span><br><span class="line">	...</span><br><span class="line">	free(ptr);</span><br><span class="line">	ptr = NULL;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="内存泄漏"><a href="#内存泄漏" class="headerlink" title="内存泄漏"></a>内存泄漏</h2><p>分配了内存没有释放<br>调用了不正确的系统api<br>打开句柄没关闭 </p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">鸣太祖</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2024/10/21/%E7%AC%AC%E5%9B%9B%E5%91%A8%E5%AD%A6%E4%B9%A0/">http://example.com/2024/10/21/%E7%AC%AC%E5%9B%9B%E5%91%A8%E5%AD%A6%E4%B9%A0/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://example.com" target="_blank">鸣太祖的博客</a>！</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="/img/jinxi.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="next-post pull-full" href="/2024/10/14/%E7%AC%AC%E4%B8%89%E5%91%A8%E5%AD%A6%E4%B9%A0/" title="第三周学习"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">第三周学习</div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info is-center"><div class="avatar-img"><img src="/img/jinxi.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">鸣太祖</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎你的到来</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8C%87%E9%92%88"><span class="toc-number">1.</span> <span class="toc-text">指针</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%86%85%E5%AD%98"><span class="toc-number">2.</span> <span class="toc-text">内存</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D"><span class="toc-number">2.1.</span> <span class="toc-text">内存分配</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F"><span class="toc-number">2.2.</span> <span class="toc-text">内存泄漏</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/10/21/%E7%AC%AC%E5%9B%9B%E5%91%A8%E5%AD%A6%E4%B9%A0/" title="第四周学习">第四周学习</a><time datetime="2024-10-21T09:26:39.000Z" title="发表于 2024-10-21 17:26:39">2024-10-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/10/14/%E7%AC%AC%E4%B8%89%E5%91%A8%E5%AD%A6%E4%B9%A0/" title="第三周学习">第三周学习</a><time datetime="2024-10-14T13:23:16.000Z" title="发表于 2024-10-14 21:23:16">2024-10-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/10/13/%E7%AC%AC%E4%BA%8C%E5%91%A8%E5%AD%A6%E4%B9%A0/" title="第二周学习">第二周学习</a><time datetime="2024-10-13T13:36:44.000Z" title="发表于 2024-10-13 21:36:44">2024-10-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/10/11/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0/" title="第一周学习">第一周学习</a><time datetime="2024-10-11T14:06:20.000Z" title="发表于 2024-10-11 22:06:20">2024-10-11</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/img/dage.jpg);"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2024 By 鸣太祖</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
